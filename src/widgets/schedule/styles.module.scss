@@ -1,0 +1,36 @@
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: $border-radius;
+    box-shadow: $shadow-md;
+    margin-top: 20px;
+
+    h1 {
+        color: $primary-color;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $border-color;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        padding: 15px;
+        margin-top: 15px;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 10px;
+        margin-top: 10px;
+
+        h1 {
+            font-size: 1.3rem;
+        }
+    }
+}

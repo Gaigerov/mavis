@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.5;
+}
+
+.main-content {
+    max-width: $max-content-width;
+    margin: 0 auto;
+    padding: $spacing-md;
+
+    @media (min-width: $breakpoint-md) {
+        padding: $spacing-lg;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 10px;
+    }
+}
+
+.MuiPaper-root {
+    border-radius: $border-radius;
+    box-shadow: $shadow-sm;
+}
+
+.MuiButton-root {
+    text-transform: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}

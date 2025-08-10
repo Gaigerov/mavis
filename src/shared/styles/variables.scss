@@ -1,0 +1,51 @@
+@use 'sass:color';
+
+// Цветовые функции
+@function lighten($color, $amount) {
+    @return color.scale($color, $lightness: $amount);
+}
+
+@function darken($color, $amount) {
+    @return color.scale($color, $lightness: -$amount);
+}
+
+@function transparentize($color, $amount) {
+    @return color.adjust($color, $alpha: -$amount);
+}
+
+@function opacity($color, $amount) {
+    @return color.adjust($color, $alpha: -($amount / 100));
+}
+
+// Цветовая схема
+$primary-color: #1976d2;
+$secondary-color: #dc004e;
+$background-color: #f5f5f5;
+$text-color: #333;
+$text-secondary: hsl(0, 0%, 40%);
+$border-color: #ddd;
+
+// Отступы
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Границы
+$border-radius: 4px;
+$border-width: 1px;
+
+// Тени
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+// Ширины
+$max-content-width: 1200px;
+$sidebar-width: 240px;
+
+// Точки адаптивации
+$breakpoint-sm: 600px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1200px;

@@ -1,0 +1,15 @@
+.scheduleView {
+    background-color: #fff;
+    border-radius: $border-radius;
+    box-shadow: $shadow-sm;
+    padding: 20px;
+    overflow-x: auto;
+
+    @media (max-width: $breakpoint-md) {
+        padding: 15px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 10px;
+    }
+}
